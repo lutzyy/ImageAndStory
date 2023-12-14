@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StoryEnt"
+    android:padding="5dp"
+    android:background="@color/blue">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/back"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:padding="5dp"
+        android:src="@drawable/back_arrow"
+        android:background="@drawable/btn_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/storyFindEDT"
+        android:textSize="15dp"
+        android:hint="search item"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+    <Button
+        android:id="@+id/Find"
+        android:text="Find"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:layout_width="wrap_content"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@+id/storyFindEDT"
+        app:layout_constraintStart_toEndOf="@+id/storyFindEDT"
+        app:layout_constraintTop_toTopOf="@+id/storyFindEDT" />
+    <CheckBox
+        android:id="@+id/includesketch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Include Sketches"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/storyFindEDT" />
+    <FrameLayout
+        android:id="@+id/listWrapper"
+        android:layout_width="match_parent"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="300dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/includesketch">
+        <ListView
+            android:id="@+id/lv4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </FrameLayout>
+    <LinearLayout
+        android:id="@+id/selectedWrapper"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/listWrapper">
+        <TextView
+            android:text="You Select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/Selectedtags"
+            android:text="Unavailable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="false"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/submit"
+        android:text="Story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/selectedWrapper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/scrollView2" />
+    <ScrollView
+        android:id="@+id/scrollView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Story"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:background="@drawable/edtshape"/>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

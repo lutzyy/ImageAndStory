@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.cw4.TypeTagger"
+    android:background="@color/blue">
+
+    <ImageView
+        android:id="@+id/animationImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ImageAndStory"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:textColor="#C0F0F0F0" />
+
+    <Button
+        android:id="@+id/pTagger"
+        android:layout_margin="20pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Photo Tagger"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/sTagger"
+        android:layout_margin="20pt"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Sketch Tagger"
+        android:textSize="30dp"/>
+    <Button
+        android:id="@+id/Story"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Story Generator"
+        android:layout_margin="25pt"
+        android:textSize="30dp"
+        android:elevation="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/SKtagger"
+        app:layout_constraintStart_toStartOf="@+id/SKtagger"
+        app:layout_constraintTop_toBottomOf="@+id/SKtagger" />
+</LinearLayout>
